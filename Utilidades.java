@@ -3,7 +3,7 @@ import java.util.Scanner;
  *   Clase de utilidades
  *   Incluye métodos estáticos
  *   
- *   @author - 
+ *   @author - Andrés Guallar Chamorro
  */
 public class Utilidades
 {

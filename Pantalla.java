@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  *  Clase con métodos estáticos para trabajar 
  *  la pantalla (terminal de texto)
- *  
+ *  @autor - Andrés Guallar Chamorro
  */
 public class Pantalla
 {

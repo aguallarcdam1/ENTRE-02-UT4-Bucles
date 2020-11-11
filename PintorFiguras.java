@@ -2,7 +2,7 @@
 /**
  *  Clase que dibuja una figura 
  * 
- * @author - 
+ * @author - Andrés Guallar Chamorro
  *  
  */
 public class PintorFiguras

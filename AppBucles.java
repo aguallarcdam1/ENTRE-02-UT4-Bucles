@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- *  @author - 
+ *  @author - Andrés Guallar Chamorro
  *  
  * Punto de entrada a la aplicación
  *  
