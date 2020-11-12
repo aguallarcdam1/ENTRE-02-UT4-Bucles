@@ -24,6 +24,7 @@ public class IUTexto
      */
     public void iniciar()
     {
+
         hacerSumasOctales();
         dibujarFiguras();
 
@@ -41,7 +42,9 @@ public class IUTexto
     private void hacerSumasOctales()
     {
         Pantalla.borrarPantalla();
-        char reinicio = 'S';
+        System.out.println("Teclee 'S' o 's' para empezar el programa");
+
+        char reinicio = teclado.nextLine().charAt(0);
         while(reinicio == 'S' || reinicio == 's'){
             Pantalla.borrarPantalla();
             System.out.println("Teclee el primer número en octal:");
@@ -70,11 +73,14 @@ public class IUTexto
             int resultado = calculadora.sumarEnOctal(numero1, numero2);
             System.out.println("El resultado de la suma es: " + resultado);
             Pantalla.hacerPausa();
-            System.out.println("Si desea repetir el programa pulse ('S' o 's':");
+
+            System.out.println("Si desea repetir el programa pulse 'S' o 's', si deasea finalizar pulse cualquier otra letra:");
+            teclado.nextLine();
             reinicio = teclado.nextLine().charAt(0);
         }
-        System.out.println("-----Programa Finalizado-----");
 
+        System.out.println("-----Programa Finalizado-----");
+        
     }
 
     /**
@@ -85,7 +91,19 @@ public class IUTexto
 
     private void dibujarFiguras()
     {
+        System.out.println("Dame el valor de la altura de la figura(de 1 a 10 incluidos):");
+        int alt = teclado.nextInt();
+        while(alt < 1 || alt > 10){
 
+            System.out.println("Valor de la altura de la figura erroneo(debe ser de 1 a 10 incluidos):");
+            teclado.nextLine();
+            alt = teclado.nextInt();
+
+            
+        }
+        pintor.dibujarFigura(alt);
+        Pantalla.hacerPausa();
+        alt = 0;
+        System.out.println("-----Programa Finalizado-----");
     }
-
 }
