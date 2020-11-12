@@ -16,26 +16,31 @@ public class CalculadoraOctal
     public int sumarEnOctal(int n1, int n2) {
         int cifraResult = 0;
         int X = 0;
-        int cifras = Utilidades.contarCifras(n1);
         int contadol = 0;
-        int resultadoT = 1;
-        while(cifras != contadol){
+        int resultadoT = 0;
+        while(n1 != 0 || n2 != 0){
             int cifra1 = n1 % 10;
             int cifra2 = n2 % 10;
             cifraResult = cifra1 + cifra2 + X;  
-            
+            X = 0;
             if (cifraResult > 7){
-                X = 0;
+                
 
                 cifraResult -= 8;
+                resultadoT = resultadoT + ((int) Math.pow(10,contadol) 
+                                            * (cifraResult));
 
-                
                 X = 1;
             }
-            resultadoT += cifraResult * 10;
+            else{
+                resultadoT += ((int) Math.pow(10,contadol) * cifraResult);
+            }
             n1 /= 10;
             n2 /= 10;
             contadol++;
+        }
+        if (X == 1){
+            resultadoT += ((int) Math.pow(10,contadol) * 1);
         }
         return resultadoT;
     }
